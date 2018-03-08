@@ -1,7 +1,7 @@
 require 'sinatra'
 
 class Battle < Sinatra::Base
-
+enable :sessions
   get '/' do
     erb(:home)
   end
