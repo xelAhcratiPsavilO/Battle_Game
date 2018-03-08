@@ -1,11 +1,30 @@
 <html>
+  <head>
+    <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    h1 {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%)
+      text-align: center;
+      font-family: Pacifico, Calibri;
+      font-size: 3em,
+    }
+    </style>
+  </head>
   <body background = 'http://7images.cgames.de/images/gamestar/226/mortal-kombat_2654936.jpg'>
     <font color="white">
-    <h1>Round one</h1>
+    <h1>
+    <p>Round one</p>
     <% if @player1 and @player2 %>
-    <h3><%= @player1 %> VS <%= @player2 %></h3>
+    <p><%= @player1 %> VS <%= @player2 %></p>
     <% end %>
-    <h1>FIGHT!</h1>
+    <p>FIGHT!</p>
+    </h1>
     </font>
   </body>
 </html>
