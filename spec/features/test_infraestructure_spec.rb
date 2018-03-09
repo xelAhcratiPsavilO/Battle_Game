@@ -17,7 +17,7 @@ describe Battle do
       fill_in 'name1', with: 'Hwoarang'
       fill_in 'name2', with: 'Jinpachi'
       click_button 'Fighters selected'
-      expect(page).to have_content '------------------------------ Hwoarang VS Jinpachi ------------------------------'
+      expect(page).to have_content "------------------------------ Hwoarang VS Jinpachi ------------------------------"
     end
 
   end
