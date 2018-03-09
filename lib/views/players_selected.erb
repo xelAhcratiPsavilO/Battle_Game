@@ -14,6 +14,14 @@
       font-family: Pacifico, Calibri;
       font-size: 3em,
     }
+    .HP {
+      position: absolute;
+      top: 55%;
+      transform: translateX(-50%) translateY(-50%)
+      text-align: center;
+      font-family: Pacifico, Calibri;
+      font-size: 200px,
+    }
     </style>
   </head>
   <body background = 'http://7images.cgames.de/images/gamestar/226/mortal-kombat_2654936.jpg'>
@@ -25,6 +33,8 @@
     <% end %>
     <p> ------------------------------ </p>
     </h1>
+    <h2 class ='HP' style='right: 10%;'><%= @player2 %>: 60HP</h2>
+    <h2 class ='HP' style='left: 10%'><%= @player1 %>: 60HP</h2>
     </font>
   </body>
 </html>
