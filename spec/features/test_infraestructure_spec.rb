@@ -14,27 +14,18 @@ describe Battle do
 
   feature 'Names getting' do
     scenario 'checks if users can introduce their names' do
-      visit '/players'
-      fill_in 'name1', with: 'Hwoarang'
-      fill_in 'name2', with: 'Jinpachi'
-      click_button 'Fighters selected'
+      sig_in_and_fight
       expect(page).to have_content "------------------------------ Hwoarang VS Jinpachi ------------------------------"
     end
   end
 
   feature 'View HP' do
     scenario 'see Player 2 hit points' do
-      visit '/players'
-      fill_in 'name1', with: 'Hwoarang'
-      fill_in 'name2', with: 'Jinpachi'
-      click_button 'Fighters selected'
+      sig_in_and_fight
       expect(page).to have_content "Jinpachi: 60HP"
     end
     scenario 'see Player 1 hit points' do
-      visit '/players'
-      fill_in 'name1', with: 'Hwoarang'
-      fill_in 'name2', with: 'Jinpachi'
-      click_button 'Fighters selected'
+      sig_in_and_fight
       expect(page).to have_content "Hwoarang: 60HP"
     end
   end
