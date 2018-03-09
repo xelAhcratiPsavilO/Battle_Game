@@ -20,14 +20,23 @@ describe Battle do
   end
 
   feature 'View HP' do
-    scenario 'see Player 2 hit points' do
-      sig_in_and_fight
-      expect(page).to have_content "Jinpachi: 60HP"
-    end
-    scenario 'see Player 1 hit points' do
+    scenario 'see Player1 hit points' do
       sig_in_and_fight
       expect(page).to have_content "Hwoarang: 60HP"
     end
+    scenario 'see Player2 hit points' do
+      sig_in_and_fight
+      expect(page).to have_content "Jinpachi: 60HP"
+    end
   end
+
+  # feature 'Attack' do
+  #   scenario 'attack Player2 and receive confirmation' do
+  #     sig_in_and_fight
+  #     click_link('https://d1u5p3l4wpay3k.cloudfront.net/awesomenauts_gamepedia/1/1b/UI_Skillbutton_Brute_Attack.PNG')
+  #     visit '/attack'
+  #     expect(page).to have_content 'Hwoarang attacked Jinpachi'
+  #   end
+  # end
 
 end
